@@ -14,10 +14,10 @@
 
 
 ## 题目
-[启动屏&&新功能导航]
+[启动屏&&新功能导航](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/SplashGuide)
 
-[登录注册解决方案]
+[登录注册解决方案](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/LoginAndRegister)
 
-[完整开发框架]
+[完整开发框架](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/QuickStart)
 
 
