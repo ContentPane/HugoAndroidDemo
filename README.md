@@ -1,2 +1,23 @@
-# HugoAndroidDemo
-step by step coding
+
+# 一周学习Android App计划
+
+
+
+### 开发工具&&语言
+- Android Studio
+- Java
+
+
+## 目的
+- 争取一个星期联系一个小模块
+
+
+
+## 题目
+[启动屏&&新功能导航]
+
+[登录注册解决方案]
+
+[完整开发框架]
+
+
