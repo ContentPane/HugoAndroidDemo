@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.github.markzhai:blockcanary-analyzer-1.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/blockcanary-analyzer-1.5.0.aar/05c44ccbfc30375ed91b6a050fd02f9d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/blockcanary-analyzer-1.5.0.aar/05c44ccbfc30375ed91b6a050fd02f9d/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
