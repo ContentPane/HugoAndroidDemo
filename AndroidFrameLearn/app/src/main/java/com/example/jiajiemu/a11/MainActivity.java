@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+//  同步请求
     public void synRequest(){
         Request request = new Request.Builder().url("http://www.baidu.com")
                 .get().build();
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     OkHttpClient client = new OkHttpClient.Builder().readTimeout(5, TimeUnit.SECONDS).build();
+//  异步请求
     public void asyRequest(){
         Request request = new Request.Builder().url("http://www.baidu.com")
                 .get().build();
