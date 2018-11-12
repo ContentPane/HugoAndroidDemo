@@ -19,7 +19,7 @@ import com.squareup.picasso.Transformation;
 public class PicassoUtils {
 
     //默认加载图片
-    public static void loadImaheView(Context mContext, String url, ImageView imageView) {
+    public static void loadImageView(Context mContext, String url, ImageView imageView) {
         Picasso.with(mContext).load(url).into(imageView);
     }
 

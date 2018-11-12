@@ -103,7 +103,7 @@ public class GirlFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //解析图片
-                PicassoUtils.loadImaheView(getActivity(), mListUrl.get(position), iv_img);
+                PicassoUtils.loadImageView(getActivity(), mListUrl.get(position), iv_img);
                 //缩放
                 mAttacher = new PhotoViewAttacher(iv_img);
                 //刷新

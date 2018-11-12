@@ -95,7 +95,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         profile_image = (CircleImageView) view.findViewById(R.id.profile_image);
         profile_image.setOnClickListener(this);
 
-
+        UtilTools.getImageToShare(getActivity(),profile_image);
 
         //初始化dialog
         dialog = new CustomDialog(getActivity(), 0, 0,
@@ -208,6 +208,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
 
     public static final String PHOTO_IMAGE_FILE_NAME = "fileImg.jpg";
     public static final int CAMERA_REQUEST_CODE = 100;
