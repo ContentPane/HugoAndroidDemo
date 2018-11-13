@@ -1,5 +1,67 @@
-* OkHttp  
+## OkHttp  
 [OkHttp使用介绍](http://www.cnblogs.com/ct2011/p/4001708.html)  
 [OkHttp使用进阶](https://www.cnblogs.com/ct2011/p/3997368.html) 译自[OkHttp Github官方教程](https://github.com/square/okhttp/wiki/Recipes)
 
+## Retrofit
+### 原理
+* App应用程序通过Retrofit请求网络，实际上是使用Retrofit接口层封装请求参数，之后由Okhttp完成后续的请求操作。
+* 在服务端返回数据之后，OKhttp将原始的结果交给Retrofit，Retrofit根据用户的需求对结果进行解析。
 
+### 步骤
+* 添加Retrofit库的依赖，添加网络权限；
+* 创建 接受服务器返回数据的 类；
+* 创建 用于描述网络请求 的接口；
+* 创建 Retrofit 实例；
+* 创建 网络请求接口实例；
+* 发送网络请求（异步/同步）；
+* 处理服务器返回的数据。
+
+### 静态代理
+* 代理模式：为其他对象提供一种代理，用以控制对这个对象的访问
+* eg.海外购物
+* proxy1
+
+### 动态代理
+* 无侵入
+* 通俗：增强方法
+* 动态代理：代理类子在程序运行时创建的代理方式
+* 相比于静态代理，不用频繁修改每个代理类
+* 动态代理写法：1，jdk动态代理(proxy2)；2，CGLIB
+
+### 动态代理总结
+* 与运行期
+* InvocationHandler接口和Proxy类
+* 动态代理和静态代理最大的不同：动态代理的代理类是在运行期间动态生成
+
+### Retrofit网络通信八步
+* 创建retrofit实例;
+* 定义一个网络请求接口并为接口中的方法添加注解；
+* 通过 动态代理 生成 网络请求对象；
+* 通过 网络请求适配器 将 网络请求对象 进行平台适配；
+* 通过 网络请求执行器call 发送网络请求；
+* 通过 数据转换器 解析数据；
+* 通过 回调执行器 切换线程；
+* 用户在主线程处理返回结果。
+
+
+[深入浅出 Retrofit-知乎](https://zhuanlan.zhihu.com/p/24109629)
+
+
+
+
+
+
+
+
+
+
+
+
+## 其他参考资料
+
+- [Lottie 动画开源库使用 & 源码分析](https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/android/Lottie动画开源库使用&源码分析.md)
+- [Universal-Image-Loader 源码分析 from 【codeKK】](http://a.codekk.com/detail/Android/huxian99/Android%20Universal%20Image%20Loader%20%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90)
+- [Glide 源码分析 from 【郭霖】](http://blog.csdn.net/column/details/15318.html)
+- [EventBus 源码分析 from 【codeKK】](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
+- [OkHttp 源码分析 from 【Piasy】](https://blog.piasy.com/2016/07/11/Understand-OkHttp/)
+- [Volley 源码分析 from 【codeKK】](http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
