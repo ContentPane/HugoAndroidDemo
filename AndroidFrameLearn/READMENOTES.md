@@ -1,6 +1,7 @@
 ## OkHttp  
 [OkHttp使用介绍](http://www.cnblogs.com/ct2011/p/4001708.html)  
-[OkHttp使用进阶](https://www.cnblogs.com/ct2011/p/3997368.html) 译自[OkHttp Github官方教程](https://github.com/square/okhttp/wiki/Recipes)
+[OkHttp使用进阶](https://www.cnblogs.com/ct2011/p/3997368.html) 译自[OkHttp Github官方教程](https://github.com/square/okhttp/wiki/Recipes)  
+[OkHttp 源码分析 from 【Piasy】](https://blog.piasy.com/2016/07/11/Understand-OkHttp/)
 
 ## Retrofit
 ### 原理
@@ -46,8 +47,25 @@
 
 [深入浅出 Retrofit-知乎](https://zhuanlan.zhihu.com/p/24109629)
 
+## Glide 
 
+### Glide几个基本概念
+* Model
+* Data
+* Resource
+* TransformedResource
+* TranscodedResource
+* Target
 
+[Google推荐——Glide使用详解](https://www.jianshu.com/p/7ce7b02988a4)  
+[Glide 源码分析 from 【郭霖】](http://blog.csdn.net/column/details/15318.html)
+
+## LeakCanary 
+* 原理：watch一个即将要销毁的对象 
+* 内存：1，栈（stack）2，堆（heap）3，方法区（method）  
+
+[原理到核心类源码分析](https://www.jianshu.com/p/1e7e9b576391)  
+[LeakCanary中文使用说明](https://www.liaohuqiu.net/cn/posts/leak-canary-read-me/)  
 
 
 
