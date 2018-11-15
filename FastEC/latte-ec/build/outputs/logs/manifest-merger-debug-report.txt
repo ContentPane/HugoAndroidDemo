@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+	package
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:2:5-34
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:1-20:12
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:4:5-19:19
+	android:supportsRtl
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:7:9-35
+	android:label
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:6:9-41
+	android:allowBackup
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:5:9-35
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:9:9-13:50
+	android:screenOrientation
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:13:13-47
+	android:exported
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:12:13-37
+	android:configChanges
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:11:13-74
+	android:name
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:10:13-60
+activity#com.alipay.sdk.auth.AuthActivity
+ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:14:9-18:50
+	android:screenOrientation
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:18:13-47
+	android:exported
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:17:13-37
+	android:configChanges
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:16:13-74
+	android:name
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml:15:13-60
+uses-sdk
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		ADDED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
+		INJECTED from /Users/hugo/Documents/Code-Study/HugoAndroidDemo/FastEC/latte-ec/src/main/AndroidManifest.xml
