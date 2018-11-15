@@ -60,22 +60,63 @@
 [Google推荐——Glide使用详解](https://www.jianshu.com/p/7ce7b02988a4)  
 [Glide 源码分析 from 【郭霖】](http://blog.csdn.net/column/details/15318.html)
 
-## LeakCanary 
+## LeakCanary 性能优化框架
 * 原理：watch一个即将要销毁的对象 
 * 内存：1，栈（stack）2，堆（heap）3，方法区（method）  
 
-[原理到核心类源码分析](https://www.jianshu.com/p/1e7e9b576391)  
+[LeakCanary原理到核心类源码分析](https://www.jianshu.com/p/1e7e9b576391)  
 [LeakCanary中文使用说明](https://www.liaohuqiu.net/cn/posts/leak-canary-read-me/)  
 
+### OOM 
+* 内存泄漏往往是罪魁祸首
+* LeakCanary，它可以实时监测Activity  
+
+### LeakCanary原理
+* Activity Destroy之后将它放在一个WeakReference
+* 这个WeakReference关联到一个ReferenceQueue
+* 查看ReferenceQueue是否存在Activity的引用
+* 如果该Activity泄漏了，Dump出heap信息，然后再去分析泄漏路径
+
+#### Java中4种引用类型
+* 强引用（StrongReference）
+* 软引用（SoftReference）
+* 弱引用（WeakReference）
+* 虚引用
+
+### LeakCanary源码分析
+* 首先会创建一个refwatcher,启动一个ActivityRefWatcher
+* 通过ActivityLifecycleCallvacks 把 Activity 的 onDestroy 生命周期关联
+* 最后在线程池中去开始分析我们的泄漏
+* 解析hprof文件，把这个文件封装成snapshot
+* 根据弱引用和前面定义的key值，确定泄漏的对象
+* 找到最短泄漏路径，作为结果反馈出来
+
+## ButterKnife 注解库
+[JakeWharton/butterknife](https://github.com/JakeWharton/butterknife)
+
+### ButterKnife工作原理
+* 1，编译的时候扫描注解，并做相应的处理，调用javapoet库生成java代码。
+* 调用ButterKnife.bind(this);方法的时候，将ID与对应的上下文绑定在一起。
+
+
+## blockcanary 性能优化框架
 
 
 
+## eventbus 事件发布订阅框架
 
+## dagger2 依赖注入库
+
+## rxjava 异步框架
+
+## picasso 图片框架
 
 
 
 
 ## 其他参考资料
+
+### [其他开发者关于这个课程的完整详细笔记](https://www.cnblogs.com/cold-ice/tag/Android%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/)
 
 - [Lottie 动画开源库使用 & 源码分析](https://github.com/jeanboydev/Android-ReadTheFuckingSourceCode/blob/master/android/Lottie动画开源库使用&源码分析.md)
 - [Universal-Image-Loader 源码分析 from 【codeKK】](http://a.codekk.com/detail/Android/huxian99/Android%20Universal%20Image%20Loader%20%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90)
