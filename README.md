@@ -18,7 +18,7 @@
 
 [登录注册解决方案](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/LoginAndRegister)
 
-[完整开发框架](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/QuickStart)
+[启动、注册、登录整合框架](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/QuickStart)
 
 [Android 10大开源框架解析demo](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/AndroidFrameLearn)
 
@@ -29,6 +29,8 @@
 [七牛播放器PagerView演示模式](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/QNPagerPlayer)  
 
 [慕课网智能管家](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/SmartBulter)
+
+[慕课网电商](https://github.com/HugoLipeng/HugoAndroidDemo/tree/master/FastEC)  
 
 
 ## Tips
