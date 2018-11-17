@@ -25,6 +25,20 @@ detach，attach：几乎不用，不会销毁fragment，但是会销毁里面的
 4.常以单例模式构建对象 
 5.需要在AndroidManifest.xml文件中声明使用我们自己定义的application
 
+### Activity四种启动模式
+
+* 【stander模式】
+
+* 【singleTop--重点】在Activity中再次启动该Activity，可以服用该Activity；减少其创建的数量；节省内存；
+
+* 【singleTask--重点】在应用开启之后，只保持一个Activity的实例，Home主页必然是此模式，不会创建多个Home主页；
+
+* 【singleInstance】系统级的应用会用到，全局系统的单例模式；了解即可；
+
+
+
+
+
 
 ## 附
 ### [【项目实战】-【组件化封装思想实战Android App】笔记](https://www.cnblogs.com/Oztaking/tag/_0005_Android%E5%BC%80%E5%8F%91/default.html?page=4)
