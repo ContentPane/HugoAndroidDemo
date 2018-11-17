@@ -24,16 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DemoActivity"
-            android:label="@string/lbl_demo"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.simple"/>
-            </intent-filter>
-        </activity>
-        <activity
         android:name=".activities.LandingPageActivity"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme.NoActionBar.FullScreen"

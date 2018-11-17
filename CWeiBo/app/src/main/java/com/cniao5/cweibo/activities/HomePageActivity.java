@@ -72,6 +72,7 @@ public class HomePageActivity extends BaseActivity {
             TabHost.TabSpec tabSpec = tabHost.newTabSpec(String.valueOf(i)).setIndicator(String.valueOf(i));
             tabHost.addTab(tabSpec, fragment[i], null);
         }
+
         tabHost.setCurrentTab(0);
         rgTab.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
