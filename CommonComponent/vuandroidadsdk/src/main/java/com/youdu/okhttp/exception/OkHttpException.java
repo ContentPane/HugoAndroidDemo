@@ -12,6 +12,7 @@ public class OkHttpException extends Exception {
 
 	/**
 	 * the server return code
+	 * 非常关键：是应用层需要判断的返回状态码；
 	 */
 	private int ecode;
 

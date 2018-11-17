@@ -6,10 +6,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author vision
- */
+   * 本文件的来源：根据volly的请求框架生成的文件类；
+   * @author vision
+   * 功能：将请求的参数封装在两个线程安全的HashMap中；
+  */
 public class RequestParams {
-
+    //创建两个线程安全的HashMap;
     public ConcurrentHashMap<String, String> urlParams = new ConcurrentHashMap<String, String>();
     public ConcurrentHashMap<String, Object> fileParams = new ConcurrentHashMap<String, Object>();
 
@@ -51,7 +53,7 @@ public class RequestParams {
 
     /**
      * Adds a key/value string pair to the request.
-     *
+     * 核心的方法：以key放置value；
      * @param key   the key name for the new param.
      * @param value the value string for the new param.
      */
