@@ -33,6 +33,11 @@ public abstract class BaseNetWork {
 
     private RequestListener mRequestListener = new RequestListener() {
         public void onComplete(String s) {
+            /*
+                "request" : "/statuses/home_timeline.json",
+                "error_code" : "20502",
+                "error" : "need you follow uid"
+             */
             boolean success = false;
             HttpResponse response = new HttpResponse();
             JsonParser parser = new JsonParser();

@@ -9,3 +9,19 @@
 [App底部菜单-FragmentTabHost](https://www.jianshu.com/p/4d4a83945193)
 
 [微博android平台](http://open.weibo.com/wiki/Sdk/android)
+
+抽象类用法：networks/BaseNetWork  
+抽象方法：  
+public abstract WeiboParameters onPrepare();
+public abstract void onFinish(HttpResponse response, boolean success);
+
+
+HomepageListAdapter extends RecyclerView.Adapter
+
+**Glide的优势** 相对于Picasso而言，Glide与 Picasso 的用法基本类似。Glide在缓存图片的时候是缓存全尺寸的图片，而Glide则是根据ImageView的大小进行缓存的。而且， Glide做到了Picasso没有做到的：加载 Gif.
+
+
+
+
+
+

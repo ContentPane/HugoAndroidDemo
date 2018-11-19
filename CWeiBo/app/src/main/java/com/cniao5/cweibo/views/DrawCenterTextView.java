@@ -1,5 +1,6 @@
 package com.cniao5.cweibo.views;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -20,6 +21,7 @@ import android.widget.TextView;
  * Modify Time：8:02 PM
  * Remark：
  */
+@SuppressLint("AppCompatCustomView")
 public class DrawCenterTextView extends TextView {
     public DrawCenterTextView(Context context) {
         super(context);
