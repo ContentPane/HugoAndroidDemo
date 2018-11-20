@@ -42,12 +42,15 @@ final class SaveFileTask extends AsyncTask<Object, Void, File> {
             extension = "";
         }
         if (name == null) {
+            //使用拼接的名称
             return FileUtil.writeToDisk(is, downloadDir, extension.toUpperCase(), extension);
         } else {
+            //直接传入完整的名称
             return FileUtil.writeToDisk(is, downloadDir, name);
         }
     }
 
+    //执行完一步，返回到主线程的操作
     @Override
     protected void onPostExecute(File file) {
         super.onPostExecute(file);

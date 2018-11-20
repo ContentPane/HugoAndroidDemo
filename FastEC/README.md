@@ -122,13 +122,66 @@ call.execute（主线程）
 【新建callBack类】新建类 RequestCallbacks 并实现实现接口， 复写方法；
  
 
-#### 3.1 oading框架集成与完善AVLoadingIndicatorView
+#### 3.1 Loading框架集成与完善AVLoadingIndicatorView
 【地址】[AVLoadingIndicatorView](https://github.com/81813780/AVLoadingIndicatorView)
 【说明】在该地址中已经存在怎样使用的步骤；
 
+#### 3.2 集成封装获取某种类型的View  
+【说明】各种的效果的获取使用过的是反射的技术，但是**反复使用反射会影响设备的性能**；因此做了一个**机制的封装**；
 
+【原理】以**一种缓存的方式创建loader**，不需要每次使用loader的时候进行反射，这样性能会有很大幅度的提高。
 
+[Java基础之—反射（非常重要）](https://blog.csdn.net/sinat_38259539/article/details/71799078)   
+
+#### 3.3 不同的style的枚举的封装
+【对不同的类型进行封装】com.flj.latte.ui.loader.LoaderStyle
+
+#### 3.4 对传入的样式/参数封装
+com.flj.latte.ui.loader.LatteLoader  
+【样式的封装】需要封装是否需要透明度、颜色等值的传入；  style.xml  
+【传入样式参数并作为根布局】
+
+```
+LatteLoader
+
+final AppCompatDialog dialog = new AppCompatDialog(context, R.style.dialog); // 传入样式  
+final AVLoadingIndicatorView avLoadingIndicatorView = LoaderCreator.create(type, context);
+        dialog.setContentView(avLoadingIndicatorView); // 将此view作为根布局
+
+```
  
+#### 3.5 工具类-填充参数的设置
+com.flj.latte.util.dimen.DimenUtil （屏幕的宽高）  
+【工具类】新建工具类的权限一般 放为：public static； 
+
+#### 3.6 继续完善LatteLoader类
+【设置缩放比例】为了适应 不同的设备的屏幕的不同的大小，需要对加载的loader进行缩放  
+
+【创建集合，统一管理不同类型的loader】【**学习思想**】在不需要loaders的时候，只要遍历集合，一一的关闭loaders即可；  
+
+#### 3.7 网络请求中加入loader  
+【说明】handler声明的时候加关键字static；可以避免内存泄露；  
+
+
+#### 4.0 网络框架优化与完善
+
+#### 4.1【支持原始数据的post请求】 postRaw  
+#### 4.2【支持原始数据的put请求】 putRaw
+#### 4.3【增加UPLOAD上传方法】
+
+#### 5.0 文件下载功能设计与实现  
+【新建com.flj.latte.net.download.DownloadHandler】新建下载处理类；  
+【file工具类】没有讲解，课下编写的 com.flj.latte.util.file.FileUtil  
+【继续封装com.flj.latte.net.download.DownloadHandler】  
+【调用的方法】在后面的使用文件下载然后更新应用程序；
+
+
+
+
+
+
+
+
 
 ## 附：
 

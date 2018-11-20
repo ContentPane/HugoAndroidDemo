@@ -7,6 +7,7 @@ import com.flj.latte.app.Latte;
 
 /**
  * Created by 傅令杰 on 2017/4/2
+ * 屏幕的宽高
  */
 
 public final class DimenUtil {
