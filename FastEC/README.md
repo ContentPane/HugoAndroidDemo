@@ -70,6 +70,66 @@
 
 【增加注解】注解的意义：告诉编译系统，这个类型是没有检测过的，可以对该方法不做检查。
 
+### 使用第三方框架搭建单Activity多fragment
+
+#### 参考的第三方的框架
+【国人开发的】[Fragmentation](https://github.com/YoKeyword/Fragmentation)
+
+【基类的抽象】子类继承基类，基类封装接口，传入布局的参数； 
+
+[butterKnife](https://github.com/JakeWharton/butterknife)的库引用 
+
+### 网络框架
+#### 1.1 使用第三方网络框架  
+【第三方框架】Retrofit，封装一个通用的框架，可以使用rxJava和rxAndroid进行封装，比较难，这里不做讲解；
+
+#### 1.2 restful 请求
+【参考文章】[restful_api](http://www.ruanyifeng.com/blog/2014/05/restful_api)
+
+#### 1.3 网络请求的具体实现类
+【网络请求的具体实现类】RestClient  
+【源码】com.flj.latte.net.RestService接口的封装  
+【封装枚举类】HttpMethod  
+【RetrofitHolder创建成功】构建OkHttp请求
+
+#### 2.1 Restful请求的处理-框架
+【说明】首先要考虑网络请求的参数（url传入的值、文件、回调、及loder加载圈）  
+【说明】使用建造者模式，将建造者类和宿主类分开；  
+【新建建造者类】RestClientBuilder  
+#### 2.2 restClient类的参数的定义
+【restClient类的参数的定义】restClient类在每次Builder的时候会生成全新的实例，而里面的参数一次更改完毕，不允许二次更改；
+#### 2.3 【回调类】callback 包
+【回调类】在网路请求之后，会存在网络请求之后的回调，比如：请求失败、请求异常、请求成功等；
+
+[新建CallBack包，书写需要调用的接口]
+
+#### 2.4 完善RestClient
+【完善com.flj.latte.net.RestClient】以Builder的形式构造出来了；  
+
+#### 2.5 RestClientBuilder 对数据的设置
+【说明】主要完成的数据的传递  
+
+#### 2.6 RestClient的调用  
+ExampleDelegate 中 testRestClient()
+
+#### 2.7 RestClientBuilder的改进
+【mParams】参数每次都会构建，比较繁琐；==> 生命为全局的变量 或者  创建内部类 
+
+#### 2.8 requset请求  
+RestClient.request  
+call.enqueue (子线程)  
+call.execute（主线程）  
+【新建callBack类】新建类 RequestCallbacks 并实现实现接口， 复写方法；
+ 
+
+#### 3.1 oading框架集成与完善AVLoadingIndicatorView
+【地址】[AVLoadingIndicatorView](https://github.com/81813780/AVLoadingIndicatorView)
+【说明】在该地址中已经存在怎样使用的步骤；
+
+
+
+ 
+
 ## 附：
 
 [博客园完整课程笔记](https://www.cnblogs.com/Oztaking/tag/_0005_Android%E5%BC%80%E5%8F%91/default.html?page=5)

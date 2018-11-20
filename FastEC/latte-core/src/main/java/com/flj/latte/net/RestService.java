@@ -24,8 +24,8 @@ import retrofit2.http.Url;
  */
 public interface RestService {
 
-    @GET
-    Call<String> get(@Url String url, @QueryMap WeakHashMap<String, Object> params);
+    @GET //不传递任何的路由信息
+    Call<String> get(@Url String url, @QueryMap WeakHashMap<String, Object> params);//QueryMap是以键值对的形式进行存储的；
 
     @FormUrlEncoded
     @POST
@@ -44,7 +44,7 @@ public interface RestService {
     @DELETE
     Call<String> delete(@Url String url, @QueryMap WeakHashMap<String, Object> params);
 
-    @Streaming
+    @Streaming  //避免一次性将所有的文件下载下来，导致内存的溢出；但是在写的时候，仍然需要将文件放在单独的线程，否则在主线程操作任然会报错。
     @GET
     Call<ResponseBody> download(@Url String url, @QueryMap WeakHashMap<String, Object> params);
 
