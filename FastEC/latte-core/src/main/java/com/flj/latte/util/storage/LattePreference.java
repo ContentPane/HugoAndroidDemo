@@ -57,6 +57,11 @@ public final class LattePreference {
                 .apply();
     }
 
+    /**
+     * flag：true：第一次存储数据；fasle：非第一次存储数据
+     * @param key
+     * @param flag
+     */
     public static void setAppFlag(String key, boolean flag) {
         getAppPreference()
                 .edit()

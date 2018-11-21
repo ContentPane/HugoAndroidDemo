@@ -14,6 +14,11 @@ public class BaseTimerTask extends TimerTask {
         this.mITimerListener = timerListener;
     }
 
+    /**
+     * 【警告】
+     * 使用接口回调的一定要判断是否为空；
+     * 否则会有很多麻烦
+     */
     @Override
     public void run() {
         if (mITimerListener != null) {

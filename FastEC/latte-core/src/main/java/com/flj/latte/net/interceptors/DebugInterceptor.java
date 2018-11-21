@@ -36,18 +36,24 @@ public class DebugInterceptor extends BaseInterceptor {
                 .protocol(Protocol.HTTP_1_1)
                 .build();
     }
-
+    //debug的封装，根据rawId查询获取json；
     private Response debugResponse(Chain chain, @RawRes int rawId) {
-        final String json = FileUtil.getRawFile(rawId);
-        return getResponse(chain, json);
+        final String json = FileUtil.getRawFile(rawId); //根据rawId取出原始文件；
+        return getResponse(chain, json); //返回Response请求的响应；
     }
 
+    /**
+     * 说明：此时存在的json文件是存在在单个应用程序的res/raw文件夹下的json；
+     * @param chain
+     * @return
+     * @throws IOException
+     */
     @Override
     public Response intercept(@NonNull Chain chain) throws IOException {
-        final String url = chain.request().url().toString();
-        if (url.contains(DEBUG_URL)) {
+        final String url = chain.request().url().toString();//得到拦截的url；
+        if (url.contains(DEBUG_URL)) {//拦截的url包含了DEBUG_URL，返回存在的json文件；
             return debugResponse(chain, DEBUG_RAW_ID);
         }
-        return chain.proceed(chain.request());
+        return chain.proceed(chain.request());//否则原样返回数据；
     }
 }
