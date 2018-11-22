@@ -322,6 +322,28 @@ Fragment和Activity建立关联的时候调用（获得activity的传递的值�
 【测试效果演示】【需要在真机演示】生成必要的签名文件；
 ##### 3.4 调用的流程总结
 
+### 主界面-通用底部导航设计与一键式封装  
+#### 1.底部导航BottomBar设计与实现
+##### 1.1 说明  
+【说明】底部的每个按钮对应的内容页面是fragmemt；
+##### 1.2 基于每个tab的子frament的父类的实现  
+【思路】底部的按钮需要一个bean或者entivity来存储每个按钮的信息和图标；需要一个基类，实现每个tab的共有的功能；底层的delegate是容器；  
+【BottomItemDelegate】//BottomItemDelegate 是每一个页面  
+【退出程序的功能】点击两次返回按钮可以退出应用的app；  
+ [request请求]fragment在返回的时候需要将fouse再次去request；需要读取fragment的源码  
+ 
+##### 1.3  建立bean类包含tab的信息（icon+文字）  
+ 【说明】tab信息不使用图片，使用icon+文字；  
+ 【构造器】ItemBuilder 容器，将BottomItemDelegate 和 BottomItemDelegate（fragment的基类） 构造关联起来；  
+  【初始化链表】子类调用方法初始化链表  
+  【tab的fragment的布局】 
+  【bottembar的添加】
+  【关联tab和fragment】
+  【重置点击之后的颜色】
+#### 2.打造适合电商主界面导航框架
+
+
+
 ## 附：
 
 [博客园完整课程笔记](https://www.cnblogs.com/Oztaking/tag/_0005_Android%E5%BC%80%E5%8F%91/default.html?page=5)
