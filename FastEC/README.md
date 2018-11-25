@@ -343,6 +343,78 @@ Fragment和Activity建立关联的时候调用（获得activity的传递的值�
 #### 2.打造适合电商主界面导航框架
 
 
+### 主界面-首页UI与数据解析器开发（RecyclerView） 
+
+#### 1.创建首页UI 
+【说明】  
+【1】需要包含沉浸式效果，逐渐透明变为显示；  
+【2】主页内容的滑动显示；  
+【3】使用新的布局：coordinatorLayout；  
+【4】包含下拉刷新，上拉加载更多；  
+##### 1.1 检查依赖是否存在
+##### 1.2 布局  
+【布局源码】layout/delegate_index.xml
+##### 1.3 控件查找
+#### 2.首页下拉刷新实现
+##### 2.1【初始化】
+##### 2.2 封装刷新功能  
+【分类包】上拉加载和下拉刷新都是swipfresh，统一规划，方便复用； 
+【模拟数据加载-临时加载逻辑的书写】整个app其实一个handler就够用了；  
+##### 2.3 加载数据的处理
+#### 3. 首页数据结构分析
+##### 3.1 数据结构的分析  
+ 【标准的restful请求】
+ 【spansize】【2】占满一半宽度；【4】占满整个宽度； 
+ 【返回的数据不一定】可以具有多种组合；  
+ 【数据的布局】数据布局在apache服务器，可以配置在ngcix服务器，效率和性能比apache要好；  
+##### 3.2 首页数据的访问
+#### 4.多布局高可用性RecyclerView封装和数据解析器
+##### 4.1 recyclerView的开源库  
+ 4.1 recyclerView的开源库
+【推荐使用的库】[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)  
+##### 4.2 添加依赖
+##### 4.3 数据转化的约束  
+【枚举单个item的显示的组合】是image+text还是image等等不同的组合； 
+【创建builder】使用链式调用最好创建builder；建造者模式可以将builder写为静态内部类，也可以单写一个类；
+##### 4.4 对json数据的解析  
+ 【得到data整体全部的数据的数组】   
+ 【data数组每个数据元素的解析】  
+ 【对banner的解析】是一个数组  
+ 【给bean赋值】使用builder模式；
+#### 5.多布局高可用性RecyclerView封装和灵活适配器打造
+##### 5.1 adapter的封装  
+【简单封装】只是封装，没有被调用；  
+【adapter的书写】使用工厂模式封装；   
+【数据转换的框架的完善】  
+【增加初始化的操作】加入布局，监听等等；    
+[初始化-添加布局]  
+[单文字的布局]
+[单文字的添加]  
+[多图片的显示布局]
+[图片+文字的布局加载]  
+[轮播图的布局加载]  
+【设置宽度监听+增加动画】  
+【数据的转换】根据type进行依次的布局； 
+[文本的加载]  
+[图片的加载]决定使用glide库；  
+[文本+图片的加载]
+[banner的加载]
+#### 6.分页客户端逻辑处理  
+【说明】需要一些常量：总页数；当前是第几页；分了几页；  
+ 【需要的东西】recyclerView;adapter;dataConvertor;pagingBean;  
+#### 7.完善主页样式  
+【说明】没有分割线，不够优美；
+##### 7.1 添加依赖库
+##### 7.2 逻辑完善
+#### 8.沉浸式状态栏和渐变透明顶栏解决方案和封装
+##### 8.1 第三方依赖  
+[StatusBarCompat](https://github.com/niorgai/StatusBarCompat)  
+##### 8.2 status_bar的设置
+##### 8.3 动态改变status_bar的实时颜色改变  
+【原理】实际改变的是CoordinatorLayout的Behavior属性值；  
+【颜色值的改变】创建一个bean，使用到第三方的[auto-value](https://github.com/google/auto)； 
+#### 9. 添加首页的item的点击事件
+【说明】点击某一个图标进行跳转的时候应该包含下面的tab，整个页面一起跳转；  
 
 ## 附：
 
